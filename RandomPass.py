@@ -16,6 +16,9 @@ cyan = Fore.CYAN
 azul = Fore.BLUE
 magenta = Fore.MAGENTA
 
+os.system("toilet -f mono12 -F border:metal Ran")
+os.system("toilet -f mono12 -F border:metal Pass")
+
 Contra_Def = "abcdefghijklmnopqrstuvwxyzñ"
 Contra = input(f"{rojo}[+]{cyan}Palabra clave:{magenta} ")
 Combo = Contra.upper()
