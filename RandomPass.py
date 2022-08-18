@@ -20,27 +20,30 @@ Contra_Def = "abcdefghijklmnopqrstuvwxyzñ"
 Contra = input(f"{rojo}[+]{cyan}Palabra clave:{magenta} ")
 Combo = Contra.upper()
 
-num = "0123456789"
-Caracters = "~/\|<>}{][+×÷=/_)(@#$%^&*¿¡!-:;,?"
+num = ""
+Caracters = ""
 logn = int(input(f"{rojo}[+]{cyan}Long max:{magenta} "))
 
-Transf = Contra + Combo
+Transf = Contra + Combo + num + Caracters
 
 num_Pre = input(f"{rojo}[+]{cyan}Deseas agregar numeros?{rojo} s/n:{magenta} " )
 
 #cara_Pre = input(f"{rojo}[+]{cyan}Deseas usar Caracters?{rojo} s/n:{magenta} ")
 if num_Pre == "s":
-    Transf = str.upper(Contra + num)
-    #num_Pre = input(f"{rojo}[+]{cyan}Deseas agregar numeros?{rojo} s/n:{magenta} ")
-    if num_Pre == "n":
-        Transf.remove(num)
-
+    num = "0123456789"
+else:
+    num = ""
 cara_Pre = input(f"{rojo}[+]{cyan}Deseas usar Caracters?{rojo} s/n:{magenta} ")
 if cara_Pre == "s":
-    Transf = str.upper(Contra + Caracters)
-    if cara_Pre == "n":
-        Transf.remove(Caracters)
+    Caracters = "~/\|<>}{][+×÷=/_)(@#$%^&*¿¡!-:;,?"
 
+elif cara_Pre == "n": 
+     Caracters = "" 
+
+Transf = Contra + Combo + num + Caracters
+#elif cara_Pre == "n":
+        #del Caracters
+    
 maxi = int(input(f"{rojo}[+]{cyan}Agrega maximo de contrañas a generar:{magenta} "))
 for _ in range(maxi): 
     Combi = random.sample(Transf, logn)
@@ -58,4 +61,5 @@ for _ in range(maxi):
     print(f"{rojo}Password")
     print(f"{verde}" + Result)
 print(f"\n{azul}List Of Passw Complet ")
+os.system("wc -l pass.txt")
 
