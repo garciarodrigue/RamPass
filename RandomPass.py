@@ -16,8 +16,8 @@ cyan = Fore.CYAN
 azul = Fore.BLUE
 magenta = Fore.MAGENTA
 
-os.system("toilet -f mono12 -F border:metal Ran")
-os.system("toilet -f mono12 -F border:metal Pass")
+os.system("toilet -f smblock --filter  border:metal T3nshi")
+os.system("toilet -f smblock --filter  border:metal RanPass")
 
 Contra_Def = "abcdefghijklmnopqrstuvwxyzñ"
 Contra = input(f"{rojo}[+]{cyan}Palabra clave:{magenta} ")
