@@ -47,7 +47,7 @@ Transf = Contra + Combo + num + Caracters
 #elif cara_Pre == "n":
         #del Caracters
     
-maxi = int(input(f"{rojo}[+]{cyan}Agrega maximo de contrañas a generar:{magenta} "))
+maxi = int(input(f"{rojo}[+]{cyan}Agrega maximo de contras a generar:{magenta} "))
 for _ in range(maxi): 
     Combi = random.sample(Transf, logn)
     passw = "".join(Combi)
