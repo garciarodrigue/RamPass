@@ -23,9 +23,26 @@ Combo = Contra.upper()
 num = "0123456789"
 Caracters = "~/\|<>}{][+×÷=/_)(@#$%^&*¿¡!-:;,?"
 logn = int(input(f"{rojo}[+]{cyan}Long max:{magenta} "))
-Transf = Contra + Combo + Caracters + num
 
-for _ in range(300): 
+Transf = Contra + Combo
+
+num_Pre = input(f"{rojo}[+]{cyan}Deseas agregar numeros?{rojo} s/n:{magenta} " )
+
+#cara_Pre = input(f"{rojo}[+]{cyan}Deseas usar Caracters?{rojo} s/n:{magenta} ")
+if num_Pre == "s":
+    Transf = str.upper(Contra + num)
+    #num_Pre = input(f"{rojo}[+]{cyan}Deseas agregar numeros?{rojo} s/n:{magenta} ")
+    if num_Pre == "n":
+        Transf.remove(num)
+
+cara_Pre = input(f"{rojo}[+]{cyan}Deseas usar Caracters?{rojo} s/n:{magenta} ")
+if cara_Pre == "s":
+    Transf = str.upper(Contra + Caracters)
+    if cara_Pre == "n":
+        Transf.remove(Caracters)
+
+maxi = int(input(f"{rojo}[+]{cyan}Agrega maximo de contrañas a generar:{magenta} "))
+for _ in range(maxi): 
     Combi = random.sample(Transf, logn)
     passw = "".join(Combi)
     
